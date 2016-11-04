@@ -10,7 +10,14 @@ public class PleinTemps extends Employe{
     };
     public double getPrime(){return prime;}
     public double getMontantHebdo(){return montantHebdo;}
-    public double calculpaie(double prime){
+    public double calculpaie(double prime){ // salaire ne change de cette façon si tu affcihe la valeur de salaire ça sera 0
         return montantHebdo*4+prime;
     }
+    
+     @Override
+    public double calcul_paie() {
+        salaire = this.heure_mois * montant_heure;
+        return salaire; 
+    }
+
 }
