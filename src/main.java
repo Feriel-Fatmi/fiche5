@@ -6,10 +6,11 @@ public class main {
         Employe A= new Employe("Feriel","informaticienne");
         A.chequePaie();
         EmployeTempsPartiel B=new EmployeTempsPartiel("Nacer","docteur");
+          B.calculPaie();
         B.chequePaie();
-        B.calculPaie();
+      
         PleinTemps C= new PleinTemps("Arslane","commerçant",5000);
-        C.chequePaie();
+        C.chequePaie(); // il faut d'abord appeler calculPaie() puis chequePaie()
         C.calculpaie(5.0);
     }
-}
+}// la aussi il faut déclarer un tableau de type employe et donc éviter la répétition des aappels a chequePaie() et calculPaie()
